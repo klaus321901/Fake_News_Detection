@@ -63,7 +63,7 @@ SERPAPI_API_KEY=your-serpapi-api-key
 
 ### 6. Run the backend
 ```
-uvicorn main:app --reload
+uvicorn main2:app --reload
 
 ```
 ### API will be live at:
