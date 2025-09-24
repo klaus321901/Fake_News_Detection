@@ -127,7 +127,7 @@ http://localhost:4200
 ### Backend Setup (FastAPI)
 Run the backend
 ```
-uvicorn main:app --reload
+uvicorn main2:app --reload
 ```
 ### The backend will be live at:
 ```
