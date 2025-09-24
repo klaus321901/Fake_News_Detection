@@ -23,7 +23,7 @@ Warnings: Weak/contradictory info if any
 ##  Project Structure
 ```text
 .
-├── main.py                # FastAPI backend with fact-check pipeline  
+├── main2.py                # FastAPI backend with fact-check pipeline  
 ├── requirements.txt       # Python dependencies  
 ├── landing_page/          # (Optional) UI assets / screenshots  
 ├── search_query_result/   # Stored snippets/screenshots from search  
