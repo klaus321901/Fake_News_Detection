@@ -1,0 +1,70 @@
+<div class="main-bg">
+  <header class="header">
+    <div class="header-left">
+      <span class="logo">RealNews</span>
+      <span class="subtitle">Real-Time Fake News Detector</span>
+    </div>
+    <div class="header-right">
+      <div class="search-container">
+        <input type="text" [(ngModel)]="searchQuery" (keyup.enter)="search()"
+          placeholder="e.g. 'Is the sky blue?'" class="search-input">
+        <button (click)="search()" class="search-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="welcome-card">
+      <div class="search-icon-large">
+        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#4285F4" viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg>
+      </div>
+      <h1>Welcome to RealNews</h1>
+      <p>Your real-time fake news detector.</p>
+      <div class="actions">
+        <!-- <button class="action-btn">Analyze URLs</button> -->
+        <button class="action-btn">Fact-Check Claims</button>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal-overlay" *ngIf="showModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>AI Analysis</h3>
+        <button class="close-btn" (click)="closeModal()">×</button>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="isLoading" class="loading-spinner"></div>
+        <div *ngIf="!isLoading && analysisResult">
+          <p><strong>Claim:</strong> "{{ searchQuery }}"</p>
+          <p><strong>Status:</strong>
+            <span class="status" [ngClass]="analysisResult.verdict.toLowerCase().replace(' ', '-')">
+              <ng-container [ngSwitch]="analysisResult.verdict.toLowerCase()">
+                <span *ngSwitchCase="'real'">✅</span>
+                <span *ngSwitchCase="'fake'">❌</span>
+                <span *ngSwitchCase="'unknown'">❓</span>
+                <span *ngSwitchDefault>⚠️</span>
+              </ng-container>
+              {{ analysisResult.verdict }}
+            </span>
+          </p>
+          <p><strong>Confidence Score:</strong> <span class="score">{{ analysisResult.score }}%</span></p>
+          <p><strong>Reasoning:</strong></p>
+          <p>{{ analysisResult.reasoning }}</p>
+          <p><strong>Evidence:</strong></p>
+          <p>{{ analysisResult.evidence }}</p>
+          <p *ngIf="analysisResult.warnings"><strong>Warnings:</strong></p>
+          <p *ngIf="analysisResult.warnings">{{ analysisResult.warnings }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

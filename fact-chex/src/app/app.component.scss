@@ -1,0 +1,229 @@
+body,
+.main-bg {
+  background: linear-gradient(135deg, #f8fafc 0%, #e3e9f7 100%);
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem 1rem 3rem;
+  background: transparent;
+
+  .logo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #1a237e;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  .subtitle {
+    margin-left: 1.5rem;
+    font-size: 1.1rem;
+    color: #607d8b;
+    font-weight: 500;
+  }
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+
+  .search-input {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.1rem;
+    border-radius: 30px 0 0 30px;
+    border: 1px solid #b0bec5;
+    outline: none;
+    width: 320px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.04);
+    transition: border 0.2s;
+
+    &:focus {
+      border: 1.5px solid #1976d2;
+    }
+  }
+
+  .search-btn {
+    padding: 0.8rem 1.2rem;
+    border-radius: 0 30px 30px 0;
+    border: 1px solid #1976d2;
+    background: #1976d2;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #1565c0;
+    }
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.welcome-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(33, 150, 243, 0.08);
+  padding: 3rem 2.5rem;
+  text-align: center;
+  max-width: 520px;
+  margin: 2rem auto;
+
+  .search-icon-large {
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+    color: #1a237e;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: #607d8b;
+    margin-bottom: 1.5rem;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+
+    .action-btn {
+      padding: 0.7rem 1.5rem;
+      border-radius: 30px;
+      border: none;
+      background: #1976d2;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #1565c0;
+      }
+    }
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  width: 500px;
+  max-width: 95vw;
+  box-shadow: 0 2px 16px rgba(33, 150, 243, 0.12);
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+
+    h3 {
+      margin: 0;
+      font-size: 1.35rem;
+      color: #1a237e;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 1.7rem;
+      cursor: pointer;
+      color: #607d8b;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #1976d2;
+      }
+    }
+  }
+
+  .modal-body {
+    p {
+      margin-bottom: 1rem;
+      color: #37474f;
+    }
+
+    .status {
+      padding: 0.3rem 0.7rem;
+      border-radius: 4px;
+      color: #fff;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+
+      &.real {
+        background-color: #4CAF50;
+      }
+
+      &.fake {
+        background-color: #F44336;
+      }
+
+      &.unknown {
+        background-color: #9E9E9E;
+      }
+
+      &.error {
+        background-color: #ff9800;
+      }
+    }
+
+    .score {
+      font-weight: bold;
+      color: #1976d2;
+    }
+  }
+}
+
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #1976d2;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
