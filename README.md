@@ -1,159 +1,128 @@
 # 📰 Fake News Detection
-
-A fact-checking application built with FastAPI, Google Gemini API, and SerpAPI.
-It accepts a claim, fetches live evidence from the web, and processes it for analysis.
-Gemini then evaluates the context to return a verdict with reasoning, confidence score, and supporting evidence.
----
-
-##  Features
-- Accepts a claim as input (via API or frontend).  
-- Fetches live web search results using **SerpAPI**.  
-- Cleans and normalizes the claim text.  
-- Passes evidence snippets into **Gemini 1.5 Flash** for structured reasoning.  
-- Returns a structured verdict:
-
-Final Verdict: REAL / FAKE / UNKNOWN
-Score: Confidence (0–100)
-Reasoning: Explanation of why
-Evidence: Context snippets
-Warnings: Weak/contradictory info if any
+_A fact-checking application built with FastAPI, Google Gemini API, and SerpAPI_
 
 ---
 
-##  Project Structure
-```text
-.
-├── main2.py                # FastAPI backend with fact-check pipeline  
-├── requirements.txt       # Python dependencies  
-├── landing_page/          # (Optional) UI assets / screenshots  
-├── search_query_result/   # Stored snippets/screenshots from search  
-└── README.md              # Documentation  
+## 📖 Project Description
+
+✨ **Problem Statement:**  
+The rapid spread of misinformation on digital platforms affects public trust, health, politics, and safety. Traditional manual verification is slow and limited in scope. There is a need for an **automated, real-time, and explainable fact-checking system**.
+
+💡 **Proposed Solution:**  
+Our project verifies textual claims in real-time by combining:  
+- **SerpAPI** for retrieving live web evidence.  
+- **Gemini 1.5 Flash** for structured reasoning.  
+- **FastAPI backend** for claim preprocessing and orchestration.  
+- **Angular frontend** for a simple, interactive interface.  
+
+The system outputs:  
+- Final Verdict (REAL / FAKE / UNKNOWN)  
+- Confidence Score (0–100)  
+- Reasoning (explanation of result)  
+- Evidence (supporting snippets)  
+- Warnings (weak or contradictory context)  
+
+🎯 **Target Users / Use Cases:**  
+- Journalists verifying breaking news.  
+- Social media platforms moderating misinformation.  
+- Students and researchers validating claims.  
+- Citizens checking suspicious news or viral content.  
+
+---
+
+## 🔬 Methodology
+
+- **Research & Ideation** – Studied misinformation, NLP techniques, and APIs.  
+- **Design** – Created system architecture (Angular frontend + FastAPI backend + external APIs).  
+- **Develop** – Implemented claim ingestion, context retrieval, reasoning, and structured output.  
+- **Test** – Unit and integration testing with real/fake claims.  
+- **Deploy** – Local deployment using FastAPI + Angular.  
+- **Future Scope** – Multilingual support, caching, multiple APIs (Bing, NewsAPI), and analytics dashboard.  
+
+---
+
+## 👥 Team Details
+
+**Team Name:** [Add Your Team Name Here]
+
+| Name           | Role            | Email               |
+|----------------|-----------------|---------------------|
+| Sana Tasneem   | Team Lead       | sanatasneem@gmail.com|
+| Member 2 Name  | Backend Dev     | member2@example.com |
+| Member 3 Name  | Frontend Dev    | member3@example.com |
+| Member 4 Name  | Researcher      | member4@example.com |
+
+---
+
+## 🛠️ Technology Stack
+
+- **Frontend:** Angular 16 (TypeScript, HTML5, SCSS)  
+- **Backend:** Python 3.11, FastAPI, Uvicorn  
+- **AI Model:** Gemini 1.5 Flash (Google Generative AI SDK)  
+- **Web Search API:** SerpAPI  
+- **Other Tools:** VS Code, Postman, Browser DevTools  
+
+---
+
+## 📹 Demonstration Video
+▶️ [Add Video Link Here]
+
+---
+
+## 🌐 Deployment
+
+This project has not been deployed online. To run locally:
+
+## 1. Clone the repository
+   ```
+   git clone https://github.com/<your-username>/Fake_News_Detection.git
+   cd Fake_News_Detection
 ```
-### 1. Clone the repository
-```
-git clone https://github.com/<your-username>/fake-news-detection.git
-cd fake-news-detection
-```
-### 2. Create a virtual environment
+   
+## 2.  Create a virtual environment & install dependencies
+   
 ```
 python -m venv .venv
-```
-### 3. Install dependencies
-```
-On Windows
-
-.venv\Scripts\activate
-
-
-On macOS/Linux
-
-source .venv/bin/activate
-```
-### 4. Clone the repository
-```
+source .venv/bin/activate   # macOS/Linux
+.venv\Scripts\activate      # Windows
 pip install -r requirements.txt
+
 ```
 
-### 5. Create a .env file
+## 3.Add API keys
+Create a .env file with:
 ```
 GEMINI_API_KEY=your-gemini-api-key
 SERPAPI_API_KEY=your-serpapi-api-key
-
 ```
 
-### 6. Run the backend
+## 4.Run the backend
 ```
 uvicorn main2:app --reload
 
-```
-### API will be live at:
-```
-http://127.0.0.1:8000
-
+Backend will run at: http://127.0.0.1:8000
 ```
 
- ### Example Usage
- ```
-curl -X POST "http://127.0.0.1:8000/fact-check" \
--H "Content-Type: application/json" \
--d '{"claim": "The Eiffel Tower is in Paris"}'
-
+## 5.Run the frontend
 ```
- ### Sample Response
- ```
-{
-  "verdict": "REAL",
-  "score": "95",
-  "reasoning": "Multiple sources confirm the Eiffel Tower is in Paris.",
-  "evidence": "- The Eiffel Tower is a landmark in Paris, France.",
-  "warnings": ""
-}
-
-```
- 
-### API Endpoints
-POST /fact-check   → Takes a claim and returns a fact-check result
-
-### Tech Stack
-
-Python 3.10+
-
-FastAPI (backend framework)
-
-Google Gemini API (fact-check reasoning)
-
-SerpAPI (live web search results)
-
-```
-##  Frontend Setup (Angular)
-
-### 1. Navigate to the frontend folder
 cd fact-chex
-
-```
-###  2.Install dependencies
-```
 npm install
-
-```
-## 3. Run the Angular app
-```
 ng serve
 
+Frontend will run at: http://localhost:4200
 ```
-### The frontend will be live at: 
-http://localhost:4200
+## 📚 References
 
-### Backend Setup (FastAPI)
-Run the backend
-```
-uvicorn main2:app --reload
-```
-### The backend will be live at:
-```
-http://127.0.0.1:8000
+1.Shu, K., Sliva, A., Wang, S., Tang, J., & Liu, H. (2017). Fake News Detection on Social Media: A Data Mining Perspective. ACM SIGKDD Explorations Newsletter, 19(1), 22–36.
+https://doi.org/10.1145/3137597.3137600
 
-```
+2.Zhou, X., & Zafarani, R. (2020). A Survey of Fake News: Fundamental Theories, Detection Methods, and Opportunities. ACM Computing Surveys, 53(5), 1–40.
+https://doi.org/10.1145/3395046
 
-### Connecting Frontend & Backend
-The Angular frontend (http://localhost:4200) sends requests to the FastAPI backend (http://127.0.0.1:8000/fact-check).
+3.Google AI. Gemini LLM Documentation.
+https://ai.google.dev
 
-Make sure both frontend and backend are running at the same time.
-
-If needed, update the Angular service file (fact-check.service.ts) with the correct backend URL.
-
-
-
-
-
-
-
-
-
-
-
-
-
+## 🖼️ Assets / Screenshots
 
 
 
