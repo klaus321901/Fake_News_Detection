@@ -125,7 +125,7 @@ Frontend will run at: http://localhost:4200
 
 ## 🖼️ Assets / Screenshots
 
-![image_alt](https://github.com/<username>/<repo>/blob/main/<path-to-image>/<image-file>?raw=true)
+![image_alt](https://github.com/klaus321901/Fake_News_Detection/blob/69e536ae00c9036d674f785420eb76f65d2de904/Problem%20Statement.png)
 
 
 
