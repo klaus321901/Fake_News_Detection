@@ -125,6 +125,9 @@ Frontend will run at: http://localhost:4200
 
 ## 🖼️ Assets / Screenshots
 
+![image_alt](https://github.com/<username>/<repo>/blob/main/<path-to-image>/<image-file>?raw=true)
+
+
 
 
 
