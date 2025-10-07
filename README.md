@@ -127,9 +127,9 @@ Frontend will run at: http://localhost:4200
 
 <img src="https://github.com/klaus321901/Fake_News_Detection/blob/259c8358997c63475913a524a28a2c6f80abc11c/Screenshot%20(715).png" width="700"/>
 
-<img src="https://github.com/klaus321901/Fake_News_Detection/blob/d96297c8546308fb61f7e322ed42c5004e3cd7b8/Problem%20Statement%20(1).png" width="700"/>
+<img src="https://github.com/klaus321901/Fake_News_Detection/blob/ae7a3fded1fa1a9ec8714199077c0f6ce7b34454/Screenshot%20(405).png" width="700"/>
 
-<img src="https://github.com/klaus321901/Fake_News_Detection/blob/d96297c8546308fb61f7e322ed42c5004e3cd7b8/Problem%20Statement%20(2).png" width="700"/>
+<img src="https://github.com/klaus321901/Fake_News_Detection/blob/ae7a3fded1fa1a9ec8714199077c0f6ce7b34454/Screenshot%20(406).png" width="700"/>
 
 
 
