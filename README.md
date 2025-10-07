@@ -49,7 +49,7 @@ The system outputs:
 
 | Name           | Role            | Email               |
 |----------------|-----------------|---------------------|
-| Sana Tasneem   | Team Lead       | sanatasneem@gmail.com|
+| Sana Tasneem   | Team Lead       | sanatasneem33@gmail.com|
 | Yasmeen Begum  | Backend Dev     |yasmee11189@gmail.com|
 | Amtul Jameel   | Frontend Dev    | amtuljameel04@gmail.com |
 
