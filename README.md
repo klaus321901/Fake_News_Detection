@@ -1,4 +1,4 @@
- # 🔎 TRUTHLENS
+ # 🔎 TRUTHLENS:Fake News Detection
 _AI-Powered Real-Time Fact Checker_
 
 _A fact-checking application built with FastAPI, Google Gemini API, and SerpAPI_
