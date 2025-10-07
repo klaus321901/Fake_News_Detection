@@ -1,7 +1,7 @@
  # 🔎 TRUTHLENS
 _AI-Powered Real-Time Fact Checker_
 
-_A fact-checking application built with FastAPI, Google Gemini API, and SerpAPI_
+_An AI-powered system that instantly verifies facts and detects fake news
 
 ---
 
@@ -50,7 +50,7 @@ The system outputs:
 | Name           | Role            | Email               |
 |----------------|-----------------|---------------------|
 | Sana Tasneem   | Team Lead       | sanatasneem@gmail.com|
-| Yasmeen Begum  | Backend Dev     | |
+| Yasmeen Begum  | Backend Dev     |yasmee11189@gmail.com|
 | Amtul Jameel   | Frontend Dev    | amtuljameel04@gmail.com |
 
 ---
