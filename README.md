@@ -50,8 +50,8 @@ The system outputs:
 | Name           | Role            | Email               |
 |----------------|-----------------|---------------------|
 | Sana Tasneem   | Team Lead       | sanatasneem@gmail.com|
-| Yasmeen Begum  | Backend Dev     | member2@example.com |
-| Amtul Jameel   | Frontend Dev    | member3@example.com |
+| Yasmeen Begum  | Backend Dev     | |
+| Amtul Jameel   | Frontend Dev    | amtuljameel04@gmail.com |
 
 ---
 
@@ -66,7 +66,7 @@ The system outputs:
 ---
 
 ## 📹 Demonstration Video
-▶️ [Add Video Link Here]
+▶️[Watch Demo](https://drive.google.com/file/d/1pfMYKcKxhiuS3KtFT6aaXZETx297AcY1/view?usp=sharing)
 
 ---
 
