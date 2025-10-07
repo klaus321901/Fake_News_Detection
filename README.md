@@ -1,7 +1,7 @@
  # 🔎 TRUTHLENS
 _AI-Powered Real-Time Fact Checker_
 
-_An AI-powered system that instantly verifies facts and detects fake news
+An AI-powered system that instantly verifies facts and detects fake news
 
 ---
 
