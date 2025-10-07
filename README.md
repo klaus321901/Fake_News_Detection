@@ -13,7 +13,7 @@ Manual fact-checking is too slow to keep up with the viral spread of misinformat
 💡 **Proposed Solution:**  
 Our project verifies textual claims in real-time by combining:  
 - **SerpAPI** for retrieving live web evidence.  
-- **Gemini 1.5 Flash** for structured reasoning.  
+- **Gemini 2.5 Pro** for structured reasoning.  
 - **FastAPI backend** for claim preprocessing and orchestration.  
 - **Angular frontend** for a simple, interactive interface.  
 
@@ -59,7 +59,7 @@ The system outputs:
 
 - **Frontend:** Angular 16 (TypeScript, HTML5, SCSS)  
 - **Backend:** Python 3.11, FastAPI, Uvicorn  
-- **AI Model:** Gemini 1.5 Flash (Google Generative AI SDK)  
+- **AI Model:** Gemini 2.5 Pro (Google Generative AI SDK)  
 - **Web Search API:** SerpAPI  
 - **Other Tools:** VS Code, Postman, Browser DevTools  
 
