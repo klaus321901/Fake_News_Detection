@@ -45,7 +45,7 @@ The system outputs:
 
 ## 👥 Team Details
 
-**Team Name:** [Neural Nova]
+**Team Name:** Neural Nova
 
 | Name           | Role            | Email               |
 |----------------|-----------------|---------------------|
