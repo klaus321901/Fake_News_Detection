@@ -108,7 +108,7 @@ def gemini_fact_check(claim: str, context: str) -> dict:
     prompt = build_structured_prompt(claim, context)
     print("[Gemini] Prepared prompt:")
     print(prompt)
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.5-Pro")
 
     generation_config = genai.types.GenerationConfig(
         temperature=0.2,  # LOW temperature for factual accuracy
