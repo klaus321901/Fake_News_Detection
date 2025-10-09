@@ -23,6 +23,9 @@ SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
 genai.configure(api_key=GEMINI_API_KEY)
 
 app = FastAPI()
+@app.get("/")
+def root():
+    return {"message": "Hello Vercel"}
 
 # --------------------------
 # CORS Middleware
